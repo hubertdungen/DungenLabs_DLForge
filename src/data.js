@@ -570,16 +570,16 @@ export const PROJECTS = [
     visual: 'classified',
     stack: ['Unity'],
     licence: { en: 'Private project', pt: 'Projeto privado' },
-    status: { en: 'Coming soon · years away', pt: 'Brevemente · ainda a anos' },
+    status: { en: 'In development · years away', pt: 'Em desenvolvimento · ainda a anos' },
     type: { en: 'Unity game', pt: 'Jogo em Unity' },
     platforms: { en: 'Platforms to be announced', pt: 'Plataformas por anunciar' },
     tagline: {
-      en: 'An enormous political strategy and society simulation, coming soon, but not for a good while.',
-      pt: 'Uma enorme simulação de estratégia política e de sociedades, em breve, mas não para já.',
+      en: 'An enormous political strategy and society simulation, in development, and a long way from release.',
+      pt: 'Uma enorme simulação de estratégia política e de sociedades, em desenvolvimento, e ainda longe do lançamento.',
     },
     summary: {
-      en: "Polistrat is DL Forge's own game and by far its biggest project. You lead a people, shape its species, culture, government and ideology, and watch every individual live by needs, moods and opinions, from the city down to the single citizen. It runs as strategy, RPG or sandbox. Coming soon, but it will take a good while, possibly years. No public build, store page or release date yet.",
-      pt: 'O Polistrat é o jogo do próprio DL Forge e, de longe, o seu maior projeto. Lideras um povo, moldas a espécie, a cultura, o governo e a ideologia, e vês cada indivíduo viver das suas necessidades, estados de espírito e opiniões, da cidade até ao cidadão. Joga-se como estratégia, RPG ou sandbox. Brevemente, mas vai demorar bastante, possivelmente anos. Ainda sem versão pública, página de loja nem data de lançamento.',
+      en: "Polistrat is DL Forge's own game and by far its biggest project. You lead a people, shape its species, culture, government and ideology, and watch every individual live by needs, moods and opinions, from the city down to the single citizen. It runs as strategy, RPG or sandbox. In development, and it will take a good while, possibly years. No public build, store page or release date yet.",
+      pt: 'O Polistrat é o jogo do próprio DL Forge e, de longe, o seu maior projeto. Lideras um povo, moldas a espécie, a cultura, o governo e a ideologia, e vês cada indivíduo viver das suas necessidades, estados de espírito e opiniões, da cidade até ao cidadão. Joga-se como estratégia, RPG ou sandbox. Em desenvolvimento, e vai demorar bastante, possivelmente anos. Ainda sem versão pública, página de loja nem data de lançamento.',
     },
     problem: {
       en: 'An earlier public prototype, PoliStrat Experience, explores a related idea: individuals forming groups, governments and ideologies, shown on a 2D political compass.',
