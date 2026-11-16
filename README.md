@@ -8,9 +8,9 @@ Use Node.js 22 or later. Run `npm ci`, then `npm run dev`. `npm run build` produ
 
 ## Publication
 
-The intended primary URL is https://dlforge.dungenlabs.com/. Netlify settings are tracked in `netlify.toml`; the site has no backend or external runtime assets.
+The primary URL is https://dlforge.dungenlabs.com/. Netlify project `dungenlabs-dlforge` builds this repository's `main` branch using `netlify.toml`; the site has no backend or external runtime assets.
 
-While the new Netlify project and domain require renewed account access, the complete site is published through the existing DungenLabs Git deployment at https://dungenlabs.com/forge/. Build that version with `npm run build -- --base=/forge/`, then publish `dist/` into the main website's `forge/` directory. `forge/build.json` records the exact source commit and output hashes. Root and subdirectory deployments use the same source.
+The previous address https://dungenlabs.com/forge/ redirects permanently to the primary domain. Build with `npm run build` and publish `dist/` at the domain root. `.netlify/` is ignored so local site links never enter version control.
 
 ## Content and validation
 
