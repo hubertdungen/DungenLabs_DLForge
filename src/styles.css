@@ -258,6 +258,9 @@ p { margin: 0; }
   pointer-events: none;
 }
 @keyframes scan { to { top: 100%; } }
+.select-captions { display: grid; }
+.select-caption { grid-area: 1 / 1; visibility: hidden; }
+.select-caption.is-on { visibility: visible; }
 .select-caption {
   display: grid; gap: 4px; padding: 16px 16px 14px; color: var(--muted); font-size: 0.92rem;
 }

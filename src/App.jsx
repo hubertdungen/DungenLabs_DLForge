@@ -211,10 +211,18 @@ function Hero({ t, lang, openProject }) {
               <Visual p={p} t={t} lang={lang} large />
               <span className="frame" aria-hidden="true"><i /><i /><i /><i /></span>
             </span>
-            <span className="select-caption">
-              <span className="kind-chip">{p.kinds.map((k) => t.kinds[k]).join(' / ')}</span>
-              <strong>{nameOf(p, lang)}</strong>
-              <span>{p.tagline[lang]}</span>
+            {/* all captions share one grid cell so the panel height is the tallest one and never shifts the list under the cursor */}
+            <span className="select-captions">
+              {FEATURED.map((id) => {
+                const f = byId[id];
+                return (
+                  <span key={id} className={'select-caption' + (id === active ? ' is-on' : '')} aria-hidden={id === active ? undefined : 'true'}>
+                    <span className="kind-chip">{f.kinds.map((k) => t.kinds[k]).join(' / ')}</span>
+                    <strong>{nameOf(f, lang)}</strong>
+                    <span>{f.tagline[lang]}</span>
+                  </span>
+                );
+              })}
             </span>
           </button>
           <ul className="select-list" aria-describedby="select-hint">
