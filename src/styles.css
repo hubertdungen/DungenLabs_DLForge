@@ -259,7 +259,7 @@ p { margin: 0; }
 }
 @keyframes scan { to { top: 100%; } }
 .select-caption {
-  display: grid; gap: 4px; padding: 14px 4px 4px; color: var(--muted); font-size: 0.92rem;
+  display: grid; gap: 4px; padding: 16px 16px 14px; color: var(--muted); font-size: 0.92rem;
 }
 .select-caption strong { color: var(--text); font: 800 1.15rem/1.2 var(--f-disp); }
 .select-list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 6px; }
