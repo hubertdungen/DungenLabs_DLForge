@@ -262,7 +262,7 @@ export const PROJECTS = [
       { label: { en: 'Open Fatia', pt: 'Abrir o Fatia' }, href: 'https://hubertdungen.github.io/fatia/' },
       { label: { en: 'Source', pt: 'Código' }, href: GH + 'fatia' },
     ],
-    shots: [shot('fatia-app', 'Fatia live, Portuguese interface', 'Fatia ao vivo, interface em português')],
+    shots: [shot('fatia-calculator-v2', 'Fatia live, Portuguese interface', 'Fatia ao vivo, interface em português')],
   },
   {
     id: 'bobina',
