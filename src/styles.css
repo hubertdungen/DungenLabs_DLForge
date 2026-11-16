@@ -531,8 +531,9 @@ a.div-card:hover { border-color: var(--line-2); background: var(--panel-2); }
   color: var(--text); text-decoration: none;
   transition: opacity 0.25s;
 }
-.partner-cards li > a:hover { opacity: 0.75; }
-.partner-cards img { height: 72px; width: 72px; max-width: 220px; object-fit: contain; filter: grayscale(1) invert(1) contrast(1.15); }
+.partner-cards li > a:hover { opacity: 1; }
+.partner-cards img { height: 72px; width: 72px; max-width: 220px; object-fit: contain; filter: grayscale(1) invert(1) contrast(1.15); transition: filter .25s; }
+.partner-cards li > a:hover img { filter: none; }
 .partner-word { font: 500 1.75rem/1 var(--f-body); white-space: nowrap; }
 .partner-word b { font-weight: 800; }
 .partner-copy { border-top: 1px solid var(--line); padding: 24px 0 0; }
@@ -661,6 +662,7 @@ dialog.case[open] { animation: caseIn 0.32s var(--ease); }
 
 /* Original Hexrig wordmark captured from its storefront header. */
 .partner-cards img.hexrig-wordmark { width: auto; filter: none; }
+.partner-cards li > a:hover img.hexrig-wordmark { filter: brightness(1.5); }
 
 /* Loose Lips art is 16:9 with text at the edges: show it whole instead of cropping */
 .card-media > img[src*="looselips"], .select-media img[src*="looselips"] { object-fit: contain; background: #020809; }
