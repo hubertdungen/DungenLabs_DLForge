@@ -570,16 +570,16 @@ export const PROJECTS = [
     visual: 'classified',
     stack: ['Unity'],
     licence: { en: 'Private project', pt: 'Projeto privado' },
-    status: { en: 'In development · no release date', pt: 'Em desenvolvimento · sem data de lançamento' },
+    status: { en: 'Coming soon · years away', pt: 'Brevemente · ainda a anos' },
     type: { en: 'Unity game', pt: 'Jogo em Unity' },
     platforms: { en: 'Platforms to be announced', pt: 'Plataformas por anunciar' },
     tagline: {
-      en: 'A political strategy game, being built in Unity.',
-      pt: 'Um jogo de estratégia política, em construção no Unity.',
+      en: 'An enormous political strategy and society simulation, coming soon, but not for a good while.',
+      pt: 'Uma enorme simulação de estratégia política e de sociedades, em breve, mas não para já.',
     },
     summary: {
-      en: "Polistrat is DL Forge's own game, built in Unity and still in development. The project is private: there is no public build, store page or release date yet, development updates will be shared here.",
-      pt: 'O Polistrat é o jogo do próprio DL Forge, feito em Unity e ainda em desenvolvimento. O projeto é privado: ainda não há versão pública, página de loja nem data de lançamento, as novidades do desenvolvimento serão partilhadas aqui.',
+      en: "Polistrat is DL Forge's own game and by far its biggest project. You lead a people, shape its species, culture, government and ideology, and watch every individual live by needs, moods and opinions, from the city down to the single citizen. It runs as strategy, RPG or sandbox. Coming soon, but it will take a good while, possibly years. No public build, store page or release date yet.",
+      pt: 'O Polistrat é o jogo do próprio DL Forge e, de longe, o seu maior projeto. Lideras um povo, moldas a espécie, a cultura, o governo e a ideologia, e vês cada indivíduo viver das suas necessidades, estados de espírito e opiniões, da cidade até ao cidadão. Joga-se como estratégia, RPG ou sandbox. Brevemente, mas vai demorar bastante, possivelmente anos. Ainda sem versão pública, página de loja nem data de lançamento.',
     },
     problem: {
       en: 'An earlier public prototype, PoliStrat Experience, explores a related idea: individuals forming groups, governments and ideologies, shown on a 2D political compass.',
