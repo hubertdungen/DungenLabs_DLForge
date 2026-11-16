@@ -529,14 +529,12 @@ a.div-card:hover { border-color: var(--line-2); background: var(--panel-2); }
 .partner-word { font: 500 1.75rem/1 var(--f-body); }
 .partner-word b { font-weight: 800; }
 /* Hexrig uses a text wordmark on its own site; rendered here as type, no invented symbol. */
-.hexrig-word { font: 700 2.6rem/72px Helvetica, Arial, var(--f-body); letter-spacing: 0.01em; max-width: 220px; }
 .partner-line { max-width: 30ch; font-size: 0.8rem; color: var(--muted); }
 @media (max-width: 520px) {
   .partner-cards { gap: 28px 40px; }
   .partner-cards a { min-height: 56px; }
   .partner-cards img { height: 56px; width: 56px; }
   .partner-word { font-size: 1.4rem; }
-  .hexrig-word { font-size: 2.05rem; line-height: 56px; }
 }
 
 /* ---------- footer ---------- */
@@ -649,3 +647,6 @@ dialog.case[open] { animation: caseIn 0.32s var(--ease); }
 }
 .case-stage:has(> .vis) { aspect-ratio: 16 / 8; }
 @media (min-width: 1000px) { .case-stage:has(> .vis) { aspect-ratio: 16 / 6; } }
+
+/* Original Hexrig wordmark captured from its storefront header. */
+.partner-cards img.hexrig-wordmark { width: auto; filter: none; }
