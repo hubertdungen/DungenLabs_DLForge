@@ -87,12 +87,11 @@ GOVERNMENT_CIVIC_POINTS_BASE  2 → 5`}<span className="caret">▌</span></pre>
 function Classified({ t }) {
   return (
     <div className="vis vis-classified" aria-hidden="true">
-      <div className="cl-stamp">{t.modal.classified}</div>
+      <div className="cl-stamp">{t.modal.comingSoon}</div>
       <div className="cl-title">POLISTRAT</div>
       <div className="cl-lines">
         <span>ENGINE // UNITY</span>
-        <span>BUILD // ███████</span>
-        <span>RELEASE // ── ── ──</span>
+        <span>{t.modal.longHaul}</span>
       </div>
     </div>
   );

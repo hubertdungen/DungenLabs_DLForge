@@ -73,7 +73,8 @@ export const UI = {
       mods: 'Mods in the set',
       illustration: 'Illustration',
       diagram: 'Diagram',
-      classified: 'Classified build',
+      comingSoon: 'Coming soon',
+      longHaul: 'A long build, years away',
     },
   },
   pt: {
@@ -150,7 +151,8 @@ export const UI = {
       mods: 'Mods do conjunto',
       illustration: 'Ilustração',
       diagram: 'Diagrama',
-      classified: 'Versão confidencial',
+      comingSoon: 'Brevemente',
+      longHaul: 'Uma obra longa, ainda a anos',
     },
   },
 };
