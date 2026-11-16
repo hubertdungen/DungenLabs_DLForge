@@ -393,19 +393,30 @@ function Partners({ t }) {
   return (
     <section className="partners" id="partners" aria-labelledby="partners-title">
       <div className="wrap">
-        <p className="eyebrow center" id="partners-title">{t.partnersEyebrow}</p>
+        <p className="eyebrow">{t.partnersEyebrow}</p>
+        <h2 className="partners-title" id="partners-title">{t.partnersTitle}</h2>
+        <p className="partners-intro">{t.partnersIntro}</p>
         <ul className="partner-cards">
           <li>
             <a href="https://z89develop.pt" {...ext} aria-label="Z89 Develop">
               <img src={asset('/partners/z89.png')} alt="" width="72" height="72" loading="lazy" />
               <span className="partner-word">Z89 <b>Develop</b></span>
             </a>
+            <div className="partner-copy">
+              <p className="partner-role">{t.z89Role}</p>
+              <p className="partner-line">{t.z89Line}</p>
+              <a className="partner-visit" href="https://z89develop.pt" {...ext}>{t.partnerVisit} Z89 <span aria-hidden="true">↗</span></a>
+            </div>
           </li>
           <li>
             <a href="https://hexrig.com" {...ext} aria-label="Hexrig">
               <img className="hexrig-wordmark" src={asset('/partners/hexrig-wordmark.png')} alt="Hexrig" width="436" height="100" loading="lazy" />
             </a>
-            <p className="partner-line">{t.hexrigLine}</p>
+            <div className="partner-copy">
+              <p className="partner-role">{t.hexrigRole}</p>
+              <p className="partner-line">{t.hexrigLine}</p>
+              <a className="partner-visit" href="https://hexrig.com" {...ext}>{t.partnerVisit} Hexrig <span aria-hidden="true">↗</span></a>
+            </div>
           </li>
         </ul>
       </div>
