@@ -667,7 +667,7 @@ dialog.case[open] { animation: caseIn 0.32s var(--ease); }
 
 /* Original Hexrig wordmark captured from its storefront header. */
 .partner-cards img.hexrig-wordmark { width: auto; filter: none; }
-.partner-cards li > a:hover img.hexrig-wordmark { filter: brightness(1.5); }
+.partner-cards li > a:hover img.hexrig-wordmark { filter: brightness(0) invert(1); }
 
 /* Loose Lips art is 16:9 with text at the edges: show it whole instead of cropping */
 .card-media > img[src*="looselips"], .select-media img[src*="looselips"] { object-fit: contain; background: #020809; }
