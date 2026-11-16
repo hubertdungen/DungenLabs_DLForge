@@ -1,0 +1,590 @@
+// Every fact here comes from the project's own README, repository or published page.
+// No invented numbers: counts shown on the site are derived from these arrays.
+
+const GH = 'https://github.com/hubertdungen/';
+
+// shot(file, en, pt, large): large = a 1440w variant exists next to the 720w one.
+const shot = (file, en, pt, large = true) => ({ file, alt: { en, pt }, large });
+
+export const FILTERS = ['all', 'apps', 'games', 'mods', 'tools'];
+
+export const PROJECTS = [
+  {
+    id: 'grimorio',
+    name: 'Grimório',
+    kinds: ['apps', 'games'],
+    icon: '/icons/grimorio.svg',
+    stack: ['React', 'Python', 'SQLite', 'Three.js', 'Forge'],
+    licence: { en: 'GPL-3.0, open source', pt: 'GPL-3.0, código aberto' },
+    status: { en: 'Released · Windows & Linux · self-hosted', pt: 'Publicado · Windows e Linux · self-hosted' },
+    tagline: {
+      en: 'Build, test and battle Magic: The Gathering decks.',
+      pt: 'Construir, testar e pôr à prova baralhos de Magic: The Gathering.',
+    },
+    summary: {
+      en: 'A free deck builder for every format that runs on your own computer. It crosses card text, real tournament decks, EDHREC data and Commander Spellbook combos to suggest cards and explain why, then plays your deck against others with the open-source Forge rules engine so you can watch the games and read a report.',
+      pt: 'Um construtor de baralhos gratuito para todos os formatos, que corre no teu computador. Cruza o texto das cartas, baralhos reais de torneio, dados do EDHREC e combos do Commander Spellbook para sugerir cartas e explicar porquê, e depois põe o baralho a jogar contra outros com o motor de regras open source Forge, para veres os jogos e leres um relatório.',
+    },
+    problem: {
+      en: 'Most deck tools tell you what is popular. Grimório tries to tell you why a card fits, and then lets you see it played.',
+      pt: 'A maioria das ferramentas diz-te o que é popular. O Grimório tenta dizer-te porque é que uma carta encaixa, e depois deixa-te vê-la em jogo.',
+    },
+    features: {
+      en: [
+        'Suggestions by role, combos and real decks, each with its reason',
+        'Coliseum: watch Forge play your deck with the live stack, then read the report',
+        "Play against Forge yourself on Grimório's own table",
+        'Draft and Sealed with real packs and Forge bots',
+        'Tournaments, leagues and online rooms shared by a public link',
+        'Universe: an interactive 3D map of every card',
+        'Interface in English, Português, Español, Deutsch and 简体中文',
+      ],
+      pt: [
+        'Sugestões por função, combos e baralhos reais, cada uma com a sua razão',
+        'Coliseu: vê o Forge jogar o teu baralho com a pilha ao vivo e lê o relatório',
+        'Joga tu contra o Forge na mesa do próprio Grimório',
+        'Draft e Sealed com pacotes reais e bots do Forge',
+        'Torneios, ligas e salas online partilhadas por link público',
+        'Universo: um mapa 3D interativo de todas as cartas',
+        'Interface em English, Português, Español, Deutsch e 简体中文',
+      ],
+    },
+    links: [
+      { label: { en: 'Source', pt: 'Código' }, href: GH + 'grimorio' },
+      { label: { en: 'Downloads', pt: 'Transferências' }, href: GH + 'grimorio/releases' },
+    ],
+    shots: [
+      shot('grimorio-universe', 'Universe: the 3D map of every card', 'Universo: o mapa 3D de todas as cartas'),
+      shot('grimorio-build', 'Build: plain-word search, deck list and suggestions', 'Construir: pesquisa em linguagem simples, lista e sugestões'),
+      shot('grimorio-suggestions', 'Suggestions by role, combos and real decks', 'Sugestões por função, combos e baralhos reais'),
+      shot('grimorio-game', 'Coliseum: Forge plays your deck, with the live stack', 'Coliseu: o Forge joga o teu baralho, com a pilha ao vivo'),
+      shot('grimorio-forgeplay', "Play against Forge on Grimório's table", 'Jogar contra o Forge na mesa do Grimório'),
+      shot('grimorio-tournament', 'Tournaments: live podium and standings', 'Torneios: pódio e classificação ao vivo'),
+      shot('grimorio-draft', 'Draft and Sealed with Forge bots', 'Draft e Sealed com bots do Forge'),
+    ],
+  },
+  {
+    id: 'sb2',
+    name: 'SpaceBourne 2 Realism',
+    kinds: ['mods'],
+    stack: ['UE4SS', 'Lua', 'PowerShell'],
+    licence: { en: 'MIT, open source', pt: 'MIT, código aberto' },
+    status: { en: 'Released · GitHub & Nexus Mods', pt: 'Publicado · GitHub e Nexus Mods' },
+    tagline: {
+      en: 'A realism mod set for SpaceBourne 2, with one installer that keeps it switched on and up to date.',
+      pt: 'Um conjunto de mods de realismo para SpaceBourne 2, com um instalador que os mantém ligados e atualizados.',
+    },
+    summary: {
+      en: 'Hardcore Tactical Realism is the core and each other mod adds one part of the collection on top of it. HTR is not required: every mod also works alone, in any combination. The installer lists the whole set, installs and switches on what you tick, and updates everything from GitHub releases.',
+      pt: 'O Hardcore Tactical Realism é o núcleo e cada um dos outros mods acrescenta uma parte da coleção. O HTR não é obrigatório: todos os mods funcionam sozinhos, em qualquer combinação. O instalador mostra o conjunto inteiro, instala e liga o que marcares e atualiza tudo a partir das releases do GitHub.',
+    },
+    problem: {
+      en: 'A set of many small mods is only pleasant if installing, enabling and updating them fits in one window.',
+      pt: 'Um conjunto de muitos mods pequenos só é agradável se instalar, ligar e atualizar tudo couber numa só janela.',
+    },
+    features: {
+      en: [
+        'Ticked means on: every ticked mod is installed and switched on',
+        'Shows the installed version next to the newest release; Update all',
+        'Updates keep every setting you changed in config.lua',
+        'Never touches saves or the game executable; backups before replacing anything',
+        'Installs UE4SS 3.0.1 in one click when it is missing',
+        'Plain PowerShell, so every line can be read before running',
+      ],
+      pt: [
+        'Marcado quer dizer ligado: cada mod marcado fica instalado e ativo',
+        'Mostra a versão instalada ao lado da mais recente; Atualizar tudo',
+        'As atualizações mantêm as definições que mudaste no config.lua',
+        'Nunca mexe nos saves nem no executável do jogo; faz cópia antes de substituir',
+        'Instala o UE4SS 3.0.1 com um clique quando falta',
+        'PowerShell simples: dá para ler cada linha antes de correr',
+      ],
+    },
+    links: [
+      { label: { en: 'Installer', pt: 'Instalador' }, href: GH + 'SpaceBourne2-Realism' },
+      { label: { en: 'Releases', pt: 'Releases' }, href: GH + 'SpaceBourne2-Realism/releases' },
+      { label: { en: 'HTR on Nexus Mods', pt: 'HTR na Nexus Mods' }, href: 'https://www.nexusmods.com/spacebourne2/mods/4' },
+    ],
+    shots: [shot('sb2-cover', 'SpaceBourne 2 Realism set cover art', 'Arte de capa do conjunto SpaceBourne 2 Realism')],
+    roster: true,
+  },
+  {
+    id: 'maestro',
+    name: 'Maestro AI',
+    kinds: ['tools'],
+    icon: '/icons/maestro.svg',
+    stack: ['Python', 'JavaScript', 'PWA'],
+    licence: {
+      en: 'PolyForm Noncommercial 1.0.0. Source available; personal use is free, commercial use needs a licence',
+      pt: 'PolyForm Noncommercial 1.0.0. Código disponível; uso pessoal gratuito, uso comercial precisa de licença',
+    },
+    status: { en: 'In active use · self-hosted', pt: 'Em uso ativo · self-hosted' },
+    tagline: {
+      en: 'Routes each request to the right AI coding agent, within budget.',
+      pt: 'Encaminha cada pedido para o agente de IA certo, dentro do orçamento.',
+    },
+    summary: {
+      en: 'A local orchestrator for AI coding agents. It reads a request, picks the engine that fits, splits larger jobs into a plan and keeps every model inside a daily and weekly quota budget.',
+      pt: 'Um orquestrador local para agentes de programação com IA. Lê o pedido, escolhe o motor adequado, divide trabalhos maiores num plano e mantém cada modelo dentro de um orçamento diário e semanal de quota.',
+    },
+    problem: {
+      en: 'Claude, Codex, Gemini and DeepSeek each have their own limits and strengths. Choosing by hand wastes quota on the wrong tool and stalls the work when one runs dry.',
+      pt: 'Claude, Codex, Gemini e DeepSeek têm limites e pontos fortes diferentes. Escolher à mão gasta quota na ferramenta errada e pára o trabalho quando uma se esgota.',
+    },
+    features: {
+      en: [
+        'Requests classified by domain and size, with fallback by remaining quota',
+        'Complex work becomes a persisted, resumable plan: scout, specialist, review',
+        'Plans run as a dependency graph, with read-only tasks in parallel',
+        'Web studio for desktop, tablet and phone, installable as a PWA',
+        'A live strategy tree per request: who decided, who works, who waits',
+        'Six visual themes, from Matrix to Dune',
+      ],
+      pt: [
+        'Pedidos classificados por domínio e dimensão, com alternativa pela quota restante',
+        'Trabalho complexo vira um plano persistente e retomável: batedor, especialista, revisão',
+        'Os planos correm como um grafo de dependências, com tarefas de leitura em paralelo',
+        'Estúdio web para computador, tablet e telemóvel, instalável como PWA',
+        'Uma árvore de estratégia ao vivo por pedido: quem decidiu, quem trabalha, quem espera',
+        'Seis temas visuais, de Matrix a Dune',
+      ],
+    },
+    note: {
+      en: 'Screenshots use a demo workspace with fictional conversations.',
+      pt: 'As capturas usam um espaço de demonstração com conversas fictícias.',
+    },
+    links: [
+      { label: { en: 'Source & README', pt: 'Código e README' }, href: GH + 'maestro-ai' },
+      { label: { en: 'README in Portuguese', pt: 'README em português' }, href: GH + 'maestro-ai/blob/main/README.pt-PT.md' },
+    ],
+    shots: [
+      shot('maestro-desktop', 'Desktop studio with the Strategy panel open', 'Estúdio no computador com o painel de Estratégia aberto'),
+      shot('maestro-scifi', 'Sci-Fi HUD theme', 'Tema Sci-Fi HUD'),
+      shot('maestro-cyberpunk', 'Cyberpunk theme', 'Tema Cyberpunk'),
+      shot('maestro-mobile', 'Phone, installed as a PWA', 'Telemóvel, instalado como PWA', false),
+    ],
+  },
+  {
+    id: 'looselips',
+    name: 'Loose Lips',
+    kinds: ['mods'],
+    icon: '/icons/looselips.png',
+    stack: ['C#', 'BepInEx 6', 'Player2'],
+    licence: { en: 'MIT, open source', pt: 'MIT, código aberto' },
+    status: { en: 'Early release · known bugs', pt: 'Versão inicial · com bugs conhecidos' },
+    tagline: {
+      en: 'Talk to anyone in Shadows of Doubt in your own words.',
+      pt: 'Fala com qualquer pessoa em Shadows of Doubt, por palavras tuas.',
+    },
+    summary: {
+      en: 'A local AI answers in character, and what it says changes the world. Nothing is a menu: you type what you want to say, and a citizen with their own personality, job, grudges and secrets decides what to do about it.',
+      pt: 'Uma IA local responde na personagem, e o que diz muda o mundo. Não há menus: escreves o que queres dizer e um cidadão com personalidade, emprego, rancores e segredos próprios decide o que fazer.',
+    },
+    problem: {
+      en: 'The model proposes, the game disposes. Every consequence is checked against real game state: a citizen cannot hand over an item they are not carrying, or call the police with no officer in earshot. Impossible requests are refused, with the reason written to a log.',
+      pt: 'O modelo propõe, o jogo dispõe. Cada consequência é verificada contra o estado real do jogo: um cidadão não pode entregar um objeto que não traz, nem chamar a polícia sem nenhum agente por perto. Pedidos impossíveis são recusados, com a razão escrita num log.',
+    },
+    features: {
+      en: [
+        'Free-text dialogue: talk, shout or lean in and whisper',
+        'Lie, persuade, bribe or talk someone into taking your side',
+        'Consequences validated against game state before they happen',
+        'Runs through the free Player2 desktop app on your own machine',
+      ],
+      pt: [
+        'Diálogo livre: falar, gritar ou chegar perto e sussurrar',
+        'Mentir, convencer, subornar ou pôr alguém do teu lado',
+        'Consequências validadas contra o estado do jogo antes de acontecerem',
+        'Corre através da app gratuita Player2, na tua máquina',
+      ],
+    },
+    note: {
+      en: 'Early release, still being worked on. Needs Player2 installed, open and signed in.',
+      pt: 'Versão inicial, ainda em desenvolvimento. Precisa da Player2 instalada, aberta e com sessão iniciada.',
+    },
+    links: [{ label: { en: 'Source & install guide', pt: 'Código e instalação' }, href: GH + 'LooseLips' }],
+    shots: [shot('looselips-banner', 'Loose Lips project banner', 'Banner do projeto Loose Lips', false)],
+  },
+  {
+    id: 'fatia',
+    name: 'Fatia',
+    kinds: ['apps'],
+    icon: '/icons/fatia.svg',
+    stack: ['HTML', 'JavaScript', 'PWA', 'Python (optional server)'],
+    licence: {
+      en: 'Fatia Licence 1.0: free for personal use, commercial use needs a licence',
+      pt: 'Licença Fatia 1.0: gratuita para uso pessoal, uso comercial precisa de licença',
+    },
+    status: { en: 'Live in the browser · installable', pt: 'Disponível no navegador · instalável' },
+    tagline: {
+      en: "A 3D printing price calculator built on your slicer's own estimate.",
+      pt: 'Uma calculadora de preços de impressão 3D a partir da estimativa do teu slicer.',
+    },
+    summary: {
+      en: 'Feed it what the slicer already reports (grams, time, cost) and Fatia returns the price, the real profit and a quote ready to send. As a local app it is one HTML file, with no server and no account.',
+      pt: 'Dás-lhe o que o slicer já indica (gramas, tempo, custo) e o Fatia devolve o preço, o lucro real e um orçamento pronto a enviar. Como app local é um único ficheiro HTML, sem servidor e sem conta.',
+    },
+    problem: {
+      en: 'Most calculators add up filament and electricity and stop there. That is a fraction of the cost: depreciation, setup per plate, waste, packaging and printer time are where long jobs quietly stop paying.',
+      pt: 'A maioria das calculadoras soma filamento e eletricidade e pára aí. Isso é só uma parte do custo: amortização, preparação por mesa, desperdício, embalagem e tempo de máquina são onde os trabalhos longos deixam de compensar.',
+    },
+    features: {
+      en: [
+        'What it costs you and what you charge, side by side, with profit always on screen',
+        'Post-print reconciliation that learns the usual drift of your estimates',
+        'Real shipping: CTT, InPost lockers and air freight to Madeira and the Azores',
+        'Several printers in one job, each plate on its own machine',
+        'Tax included or added, with presets for several EU countries and the UK',
+        'A clean client quote, with QR codes generated offline',
+        'Live link to Bobina for real stock and real cost per kilo',
+      ],
+      pt: [
+        'O que te custa e o que cobras, lado a lado, com o lucro sempre à vista',
+        'Retificação depois de imprimir, que aprende o desvio habitual das estimativas',
+        'Portes reais: CTT, cacifos InPost e transporte aéreo para a Madeira e os Açores',
+        'Várias impressoras no mesmo trabalho, cada mesa na sua máquina',
+        'Imposto incluído ou acrescentado, com predefinições para vários países da UE e o Reino Unido',
+        'Um orçamento limpo para o cliente, com códigos QR gerados sem rede',
+        'Ligação ao Bobina para stock real e custo real por quilo',
+      ],
+    },
+    links: [
+      { label: { en: 'Open Fatia', pt: 'Abrir o Fatia' }, href: 'https://hubertdungen.github.io/fatia/' },
+      { label: { en: 'Source', pt: 'Código' }, href: GH + 'fatia' },
+    ],
+    shots: [shot('fatia-app', 'Fatia live, Portuguese interface', 'Fatia ao vivo, interface em português')],
+  },
+  {
+    id: 'bobina',
+    name: 'Bobina',
+    kinds: ['apps'],
+    icon: '/icons/bobina.svg',
+    visual: 'spools',
+    stack: ['Python (standard library)', 'SQLite'],
+    licence: { en: 'Bobina Licence 1.0, source available', pt: 'Licença Bobina 1.0, código disponível' },
+    status: { en: 'Self-hosted web app', pt: 'App web self-hosted' },
+    tagline: {
+      en: 'Filament logistics: what you have, where it is, how much is left, what it costs.',
+      pt: 'Logística de filamento: o que tens, onde está, quanto resta e quanto custa.',
+    },
+    summary: {
+      en: 'An inventory for 3D printing filament with no dependencies: it runs on the system python3. Type and the list filters instantly, prices are tracked across six shops, each spool is drawn in its real colour, and an agent helps decide where everything goes.',
+      pt: 'Um inventário de filamento para impressão 3D sem dependências: corre com o python3 do sistema. Escreve-se e a lista filtra, os preços são seguidos em seis lojas, cada bobine é desenhada na sua cor e um agente ajuda a arrumar.',
+    },
+    problem: {
+      en: 'Shops name the same spool differently. "ASA Azure Preto" has to find an AzureFilm ASA Black, and "grey" has to find Cinzento.',
+      pt: 'As lojas chamam nomes diferentes à mesma bobine. "ASA Azure Preto" tem de encontrar um AzureFilm ASA Black, e "grey" tem de encontrar Cinzento.',
+    },
+    features: {
+      en: [
+        'Instant search with 700+ Portuguese and English synonyms',
+        'Prices from Evolt, Core XY, RepRap PT, QIDI EU, Elegoo EU and Amazon, refreshed every 24 hours',
+        'Paste a product link and the form fills itself: brand, material, colour, weight',
+        'Spools drawn from the colour name: "silk red", "Pastel Mint Green", "negro azabache"',
+        'Weighted average cost per kilo across every purchase',
+        'Storage as a tree (room › cabinet › shelf › box) with capacity and value',
+        'Tidy-up agent with Preview, Apply and Undo; Claude, GPT, Gemini or DeepSeek',
+      ],
+      pt: [
+        'Pesquisa instantânea com mais de 700 sinónimos em português e inglês',
+        'Preços da Evolt, Core XY, RepRap PT, QIDI EU, Elegoo EU e Amazon, atualizados a cada 24 horas',
+        'Cola-se o link de um produto e o formulário preenche-se: marca, material, cor, peso',
+        'Bobines desenhadas a partir do nome da cor: "silk red", "Pastel Mint Green", "negro azabache"',
+        'Custo médio por quilo, ponderado por todas as compras',
+        'Arrumação em árvore (sala › armário › prateleira › caixa) com capacidade e valor',
+        'Agente de arrumação com Pré-visualizar, Aplicar e Anular; Claude, GPT, Gemini ou DeepSeek',
+      ],
+    },
+    note: {
+      en: 'The visual on this card is an illustration of the spool cards, not a screenshot.',
+      pt: 'O visual deste cartão é uma ilustração dos cartões de bobine, não uma captura de ecrã.',
+    },
+    links: [{ label: { en: 'Source', pt: 'Código' }, href: GH + 'bobina' }],
+    shots: [],
+  },
+  {
+    id: 'despensa',
+    name: 'Despensa',
+    kinds: ['apps'],
+    icon: '/icons/despensa.svg',
+    stack: ['Python', 'Docker', 'PWA'],
+    licence: { en: 'AGPL-3.0, open source', pt: 'AGPL-3.0, código aberto' },
+    status: { en: 'Version 0.7 · self-hosted', pt: 'Versão 0.7 · self-hosted' },
+    tagline: {
+      en: 'Shopping lists with prices in view and a plan for where to buy, in Portugal and Spain.',
+      pt: 'Listas de compras com os preços à vista e um plano de onde comprar, em Portugal e Espanha.',
+    },
+    summary: {
+      en: 'A personal shopping app you host on your own computer or NAS. It organises monthly lists, compares products with observed prices from Portuguese and Spanish retailers, and plans which shops are worth the trip, including the cost of getting there.',
+      pt: 'Uma app de compras pessoal para alojar no teu computador ou NAS. Organiza listas mensais, compara produtos com preços observados em lojas portuguesas e espanholas e planeia que lojas compensam a viagem, incluindo o custo de lá chegar.',
+    },
+    problem: {
+      en: 'The cheapest basket is not the cheapest trip. A shop that saves two euros and costs four in fuel is not a saving.',
+      pt: 'O cabaz mais barato não é a ida mais barata. Uma loja que poupa dois euros e gasta quatro em combustível não é poupança.',
+    },
+    features: {
+      en: [
+        'Monthly lists by category, with an offline shopping mode that syncs later',
+        'Comparison per litre, kilo or unit, with source, date and history',
+        'A research queue that reads public catalogues and keeps going with the app closed',
+        'Plans across up to four shops per trip, buying whole packs',
+        '"When is it worth going?": the next 7 days against typical traffic and opening hours',
+        'Real fuel consumption from your own refuelling records',
+        'European Portuguese and Spanish interface, installable as a PWA',
+      ],
+      pt: [
+        'Listas mensais por categoria, com modo de compras offline que sincroniza depois',
+        'Comparação por litro, quilo ou unidade, com fonte, data e histórico',
+        'Uma fila de investigação que lê catálogos públicos e continua com a app fechada',
+        'Planos com até quatro lojas por ida, comprando embalagens inteiras',
+        '"Quando compensa ir?": os próximos 7 dias contra o trânsito típico e os horários',
+        'Consumo real a partir dos teus abastecimentos',
+        'Interface em português europeu e espanhol, instalável como PWA',
+      ],
+    },
+    note: {
+      en: 'Screenshots come from the repository and use an isolated demo account.',
+      pt: 'As capturas vêm do repositório e usam uma conta de demonstração isolada.',
+    },
+    links: [{ label: { en: 'Source & install', pt: 'Código e instalação' }, href: GH + 'Despensa' }],
+    shots: [
+      shot('despensa-desktop', 'Monthly list on desktop', 'Lista mensal no computador'),
+      shot('despensa-explore', 'Automatic price comparison', 'Comparação automática de preços'),
+      shot('despensa-mobile', 'List on a phone', 'Lista no telemóvel', false),
+    ],
+  },
+  {
+    id: 'lectoria',
+    name: 'Lectoria',
+    kinds: ['apps'],
+    icon: '/icons/lectoria.svg',
+    stack: ['Node.js', 'Python', 'Kokoro & Piper voices', 'Kavita'],
+    licence: { en: 'Private project, no public repository', pt: 'Projeto privado, sem repositório público' },
+    status: { en: 'Private · self-hosted', pt: 'Privado · self-hosted' },
+    tagline: {
+      en: 'A reading space where books and documents get a voice.',
+      pt: 'Um espaço de leitura onde livros e documentos ganham voz.',
+    },
+    summary: {
+      en: 'A reader for books and documents with local neural voices. It opens books from a Kavita library chapter by chapter, takes your own documents, and reads the articles published through BlogArtifex. Long readings are generated on the server as audio and keep their place across devices.',
+      pt: 'Um leitor de livros e documentos com vozes neurais locais. Abre livros de uma biblioteca Kavita capítulo a capítulo, aceita os teus documentos e lê os artigos publicados através do BlogArtifex. Leituras longas são geradas no servidor em áudio e guardam o ponto em todos os dispositivos.',
+    },
+    problem: {
+      en: 'Less noise, more stories: read quietly, or let the voice keep you company, on your own server.',
+      pt: 'Menos ruído, mais histórias: ler com calma, ou deixar que a voz acompanhe, no teu próprio servidor.',
+    },
+    features: {
+      en: [
+        'Local neural voices in European Portuguese and US English',
+        'Kavita integration: books open on the same page you left them',
+        'Drop in EPUB, PDF with text, DOCX, TXT or Markdown, up to 50 MB',
+        'Full readings generated on the server, with MP3 download',
+        'A queue and playlists shared across all your devices',
+        'Book and Focus modes, light and dark themes',
+      ],
+      pt: [
+        'Vozes neurais locais em português de Portugal e inglês dos EUA',
+        'Integração com o Kavita: os livros abrem na página onde ficaste',
+        'EPUB, PDF com texto, DOCX, TXT ou Markdown, até 50 MB',
+        'Leituras completas geradas no servidor, com transferência em MP3',
+        'Uma fila e playlists partilhadas por todos os dispositivos',
+        'Modos Livro e Foco, temas claro e escuro',
+      ],
+    },
+    note: {
+      en: 'Sample screens from the project. There is no public build to link to.',
+      pt: 'Ecrãs de exemplo do projeto. Não há versão pública para ligar.',
+    },
+    links: [],
+    shots: [
+      shot('lectoria-home', 'Home: where the next reading comes from', 'Início: de onde vem a próxima leitura'),
+      shot('lectoria-reading', 'Reading view, dark theme', 'Vista de leitura, tema escuro'),
+    ],
+  },
+  {
+    id: 'blogartifex',
+    name: 'BlogArtifex',
+    kinds: ['apps'],
+    icon: '/icons/blogartifex.svg',
+    stack: ['React', 'JavaScript', 'Node.js', 'CKEditor'],
+    licence: { en: 'Project licence in the repository (LICENSE.md)', pt: 'Licença própria no repositório (LICENSE.md)' },
+    status: { en: 'Portable beta · release 2.1.2', pt: 'Beta portátil · release 2.1.2' },
+    tagline: {
+      en: 'From a document to a published Blogger post, with the layout intact.',
+      pt: 'De um documento a um artigo publicado no Blogger, com o layout intacto.',
+    },
+    summary: {
+      en: 'A writing and publishing workspace for Blogger, made to replace discontinued tools like Open Live Writer. It brings a document into the editor without losing the structure, images, tables and typography that make it readable.',
+      pt: 'Um espaço de escrita e publicação para o Blogger, feito para substituir ferramentas descontinuadas como o Open Live Writer. Traz um documento para o editor sem perder a estrutura, as imagens, as tabelas e a tipografia que o tornam legível.',
+    },
+    problem: {
+      en: 'Moving between Word, a browser editor and Blogger breaks layout decisions. The formatting is part of the article.',
+      pt: 'Passar do Word para um editor no navegador e depois para o Blogger estraga decisões de layout. A formatação faz parte do artigo.',
+    },
+    features: {
+      en: [
+        'Paste from Word and keep fonts, sizes, colours, lists, tables and images',
+        'Import .docx files directly',
+        'Image placement with text wrapping, resizing and captions',
+        'Reusable templates, labels and post metadata',
+        'Optional AI assistant with your own OpenAI, Gemini or Claude key',
+        'Portable Windows release',
+      ],
+      pt: [
+        'Colar do Word mantendo letra, tamanhos, cores, listas, tabelas e imagens',
+        'Importar ficheiros .docx diretamente',
+        'Posicionar imagens com moldagem de texto, redimensionamento e legendas',
+        'Modelos reutilizáveis, etiquetas e metadados do artigo',
+        'Assistente de IA opcional com a tua chave OpenAI, Gemini ou Claude',
+        'Versão portátil para Windows',
+      ],
+    },
+    note: {
+      en: 'Editor capture uses fictional content with publishing and external accounts disabled.',
+      pt: 'A captura do editor usa conteúdo fictício, com publicação e contas externas desligadas.',
+    },
+    links: [
+      { label: { en: 'Source', pt: 'Código' }, href: GH + 'blogartifex' },
+      { label: { en: 'Release 2.1.2', pt: 'Release 2.1.2' }, href: GH + 'blogartifex/releases/tag/v2.1.2' },
+    ],
+    shots: [shot('blogartifex-editor', 'BlogArtifex editor interface', 'Interface do editor BlogArtifex')],
+  },
+  {
+    id: 'multiscreen',
+    name: { en: 'Multi-screen utilities', pt: 'Utilitários multi-ecrã' },
+    kinds: ['tools'],
+    visual: 'screens',
+    stack: ['C++', 'MinHook', 'PowerShell', 'Windows'],
+    licence: { en: 'MIT, open source', pt: 'MIT, código aberto' },
+    status: { en: 'Released tools · X4 in beta', pt: 'Ferramentas publicadas · X4 em beta' },
+    tagline: {
+      en: 'One game window across three independent monitors, without NVIDIA Surround.',
+      pt: 'Uma janela de jogo em três monitores independentes, sem NVIDIA Surround.',
+    },
+    summary: {
+      en: 'A family of small Windows tools, one per game. Each solves the specific way that game refuses to span mixed displays.',
+      pt: 'Uma família de pequenas ferramentas para Windows, uma por jogo. Cada uma resolve a forma específica como esse jogo se recusa a ocupar ecrãs diferentes.',
+    },
+    problem: {
+      en: 'X4 asks Windows about the selected monitor and keeps snapping an oversized window back onto one display. A generic window mover ends up fighting that resize loop, so the boundary has to be set before the window exists.',
+      pt: 'O X4 pergunta ao Windows qual é o monitor escolhido e volta sempre a encolher a janela para um só ecrã. Um movedor de janelas genérico acaba a lutar contra esse ciclo, por isso o limite tem de ser definido antes de a janela existir.',
+    },
+    features: {
+      en: [
+        'X4 Triple Screen: starts the game suspended and loads a C++/MinHook hook before window creation',
+        'DoubtSpan: Shadows of Doubt on mixed-resolution panels, using DSR/DLDSR on the sides',
+        'Star Citizen: a configurable external PowerShell wrapper',
+        'War Thunder: mixed-resolution triple monitors',
+        'Dry-run and self-test modes that report the desktop without changing anything',
+      ],
+      pt: [
+        'X4 Triple Screen: arranca o jogo suspenso e carrega um hook C++/MinHook antes de criar a janela',
+        'DoubtSpan: Shadows of Doubt em ecrãs de resoluções diferentes, com DSR/DLDSR nos laterais',
+        'Star Citizen: um wrapper externo em PowerShell, configurável',
+        'War Thunder: três monitores com resoluções diferentes',
+        'Modos de teste e simulação que mostram o ambiente de trabalho sem mudar nada',
+      ],
+    },
+    note: {
+      en: 'Window management only: native triple projection, per-monitor field of view and bezel correction are out of scope. In X4 the HUD and maps may stretch. The visual is a diagram of the documented layout, not gameplay.',
+      pt: 'Só gestão de janelas: projeção tripla nativa, campo de visão por monitor e correção de molduras ficam de fora. No X4 o HUD e os mapas podem esticar. O visual é um diagrama do layout documentado, não uma captura do jogo.',
+    },
+    links: [
+      { label: { en: 'X4 Triple Screen', pt: 'X4 Triple Screen' }, href: GH + 'x4-triple-screen' },
+      { label: { en: 'DoubtSpan', pt: 'DoubtSpan' }, href: GH + 'doubtspan' },
+      { label: { en: 'Star Citizen', pt: 'Star Citizen' }, href: GH + 'star-citizen-triple-screen' },
+      { label: { en: 'War Thunder', pt: 'War Thunder' }, href: GH + 'war-thunder-triple-screen' },
+    ],
+    shots: [],
+  },
+  {
+    id: 'stellaris',
+    name: 'MPP FLEX + FlexScript',
+    kinds: ['mods', 'tools'],
+    visual: 'console',
+    stack: ['Stellaris mod', 'Python'],
+    licence: { en: 'FlexScript: MIT. The mod builds on MPP by Athinks', pt: 'FlexScript: MIT. O mod parte do MPP de Athinks' },
+    status: { en: 'Steam Workshop mod · released tool', pt: 'Mod na Steam Workshop · ferramenta publicada' },
+    tagline: {
+      en: 'A Stellaris mod and a companion tool that make empire creation configurable.',
+      pt: 'Um mod de Stellaris e uma ferramenta que tornam a criação de impérios configurável.',
+    },
+    summary: {
+      en: 'More Picks & Points (FLEX edition) changes the points available for ethics, civics and species traits. FlexScript lets players pick presets or custom values without hand-editing the mod files, and its server mode prepares one shared configuration for friends playing together.',
+      pt: 'O More Picks & Points (edição FLEX) muda os pontos disponíveis para éticas, cívicas e traços de espécie. O FlexScript deixa escolher predefinições ou valores próprios sem editar os ficheiros à mão, e o modo servidor prepara uma configuração comum para amigos que jogam juntos.',
+    },
+    problem: {
+      en: 'Stellaris gives a budget to the choices that define a civilisation. Raising it changes what players, and the computer-controlled empires, can create.',
+      pt: 'O Stellaris dá um orçamento às escolhas que definem uma civilização. Aumentá-lo muda o que os jogadores, e os impérios controlados pelo computador, podem criar.',
+    },
+    features: {
+      en: [
+        'Vanilla, standard or custom presets from a console menu',
+        'Finds the relevant files and writes the selected values',
+        'Server mode for multiplayer sessions',
+        'Standard preset: ETHOS_MAX_POINTS 3 → 5, GOVERNMENT_CIVIC_POINTS_BASE 2 → 5',
+      ],
+      pt: [
+        'Predefinições vanilla, standard ou personalizadas num menu de consola',
+        'Encontra os ficheiros certos e escreve os valores escolhidos',
+        'Modo servidor para sessões multijogador',
+        'Predefinição standard: ETHOS_MAX_POINTS 3 → 5, GOVERNMENT_CIVIC_POINTS_BASE 2 → 5',
+      ],
+    },
+    note: {
+      en: 'Stellaris belongs to its creators. Compatibility depends on the game version and other installed mods.',
+      pt: 'O Stellaris pertence aos seus criadores. A compatibilidade depende da versão do jogo e dos outros mods.',
+    },
+    links: [
+      { label: { en: 'Steam Workshop', pt: 'Steam Workshop' }, href: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3038118849' },
+      { label: { en: 'FlexScript source', pt: 'Código do FlexScript' }, href: GH + 'Stellaris_flexScript' },
+    ],
+    shots: [],
+  },
+  {
+    id: 'polistrat',
+    name: 'Polistrat',
+    kinds: ['games'],
+    visual: 'classified',
+    stack: ['Unity'],
+    licence: { en: 'Private project', pt: 'Projeto privado' },
+    status: { en: 'In development · no release date', pt: 'Em desenvolvimento · sem data de lançamento' },
+    tagline: {
+      en: 'A political strategy game, being built in Unity.',
+      pt: 'Um jogo de estratégia política, em construção no Unity.',
+    },
+    summary: {
+      en: "Polistrat is DL Forge's own game, built in Unity and still in development. The project is private: there is no public build, store page or release date yet, and this page will not pretend otherwise.",
+      pt: 'O Polistrat é o jogo do próprio DL Forge, feito em Unity e ainda em desenvolvimento. O projeto é privado: ainda não há versão pública, página de loja nem data de lançamento, e esta página não vai fingir o contrário.',
+    },
+    problem: {
+      en: 'An earlier public prototype, PoliStrat Experience, explores a related idea: individuals forming groups, governments and ideologies, shown on a 2D political compass.',
+      pt: 'Um protótipo público anterior, o PoliStrat Experience, explora uma ideia próxima: indivíduos a formar grupos, governos e ideologias, mostrados numa bússola política 2D.',
+    },
+    features: { en: [], pt: [] },
+    links: [{ label: { en: 'PoliStrat Experience prototype', pt: 'Protótipo PoliStrat Experience' }, href: GH + 'PoliStrat_Experience' }],
+    shots: [],
+  },
+];
+
+// SpaceBourne 2 Realism set, from the installer README. Nexus ids from the same table.
+export const SB2_MODS = [
+  ['HardcoreTacticalRealism', 'Hardcore Tactical Realism', 'Combat and AI overhaul: caliber vs armour, hit zones, wounds, faction doctrines', 'Revisão do combate e da IA: calibre contra blindagem, zonas de impacto, ferimentos, doutrinas de fação', true],
+  ['SplitControls', 'Split Controls', 'Separate look inversion for ships and on foot', 'Inversão da vista separada para naves e a pé'],
+  ['SilentOps', 'Silent Ops', 'Realistic stealth, suppressors, silent takedowns', 'Furtividade realista, silenciadores, neutralizações silenciosas'],
+  ['GearWithoutLevels', 'Gear Without Levels', 'Any weapon or suit at any level, with small penalties', 'Qualquer arma ou fato em qualquer nível, com pequenas penalizações'],
+  ['HOTAS', 'SB2 HOTAS', 'Joystick, HOTAS, pedals, head tracking, triple screen', 'Joystick, HOTAS, pedais, seguimento de cabeça, três ecrãs'],
+  ['FactionPower', 'Faction Power', 'Dungeons, sales and missions earn your faction power', 'Masmorras, vendas e missões dão poder à tua fação'],
+  ['TacticalEngineering', 'Tactical Engineering', 'Deployable turrets that take time to set up', 'Torretas que levam tempo a montar'],
+  ['AmmoDiscipline', 'Ammo Discipline', 'Realistic ammo limits and scavenging', 'Munição limitada e recolha realista'],
+  ['GroundWaypoints', 'Ground Waypoints', 'Planet waypoints on foot and on the hoverbike', 'Pontos de passagem no planeta, a pé e na hoverbike'],
+  ['GetOutOfTheWay', 'Get Out of the Way', 'NPCs step aside naturally when you walk at them', 'Os NPC afastam-se com naturalidade quando passas'],
+  ['TacticalFirstPerson', 'Tactical First Person', 'First person on foot, aiming down the sights', 'Primeira pessoa a pé, a apontar pela mira'],
+  ['ClearHUD', 'Clear HUD', 'A reticle you can see and HUD colours of your choice', 'Uma mira que se vê e cores de HUD à escolha'],
+  ['BiggerArmies', 'Bigger Armies', 'More general slots: twice the ground and space forces', 'Mais vagas de general: o dobro das forças em terra e no espaço'],
+  ['SquadTactics', 'Squad Tactics', 'Your squad bounds from cover to cover as you advance', 'O esquadrão avança de abrigo em abrigo contigo'],
+  ['UnofficialPatch', 'Unofficial Patch', "Fixes for the game's own bugs: lifts, stuck enemies, squad fire", 'Correções a bugs do jogo: elevadores, inimigos presos, fogo do esquadrão'],
+  ['HardcoreSpaceRealism', 'Hardcore Space Realism', 'Space combat with weight: pod catchers, retreats, ship damage', 'Combate espacial com peso: recolha de cápsulas, retiradas, danos nas naves'],
+].map(([repo, name, en, pt, core]) => ({ href: GH + 'SpaceBourne2-' + repo, name, line: { en, pt }, core: !!core }));
+
+export const FEATURED = ['grimorio', 'sb2', 'maestro', 'looselips'];
