@@ -288,13 +288,18 @@ p { margin: 0; }
 
 /* ---------- chips ---------- */
 .kind-chip {
-  display: inline-block; width: max-content;
-  font: 700 0.6rem/1 var(--f-disp); letter-spacing: 0.16em; text-transform: uppercase;
-  padding: 6px 8px; background: var(--coral); color: #160b08;
+  --k: var(--coral);
+  display: inline-flex; align-items: center; gap: 6px; width: max-content;
+  font: 700 0.62rem/1 var(--f-disp); letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 6px 9px 6px 8px; color: var(--k);
+  background: rgba(6, 18, 20, 0.78); border: 1px solid color-mix(in srgb, var(--k) 55%, transparent);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
 }
-.kind-chip.k-games { background: #e9f1f0; }
-.kind-chip.k-mods { background: #8fd3c8; }
-.kind-chip.k-tools { background: #f3c37a; }
+.kind-chip::before { content: ""; width: 6px; height: 6px; background: var(--k); flex: none; }
+.kind-chip.k-games { --k: #e9f1f0; }
+.kind-chip.k-mods { --k: #8fd3c8; }
+.kind-chip.k-tools { --k: #f3c37a; }
 
 /* ---------- divisions ---------- */
 .split { padding: 72px 0; border-top: 1px solid var(--line); background: var(--bg-2); }
