@@ -17,6 +17,8 @@ export const PROJECTS = [
     stack: ['React', 'Python', 'SQLite', 'Three.js', 'Forge'],
     licence: { en: 'GPL-3.0, open source', pt: 'GPL-3.0, código aberto' },
     status: { en: 'Released · Windows & Linux · self-hosted', pt: 'Publicado · Windows e Linux · self-hosted' },
+    type: { en: 'Web app · React front end, Python back end', pt: 'App web · React no ecrã, Python por trás' },
+    platforms: { en: 'Windows · Linux', pt: 'Windows · Linux' },
     tagline: {
       en: 'Build, test and battle Magic: The Gathering decks.',
       pt: 'Construir, testar e pôr à prova baralhos de Magic: The Gathering.',
@@ -70,6 +72,8 @@ export const PROJECTS = [
     stack: ['UE4SS', 'Lua', 'PowerShell'],
     licence: { en: 'MIT, open source', pt: 'MIT, código aberto' },
     status: { en: 'Released · GitHub & Nexus Mods', pt: 'Publicado · GitHub e Nexus Mods' },
+    type: { en: 'Game mods in Lua · PowerShell installer', pt: 'Mods de jogo em Lua · instalador em PowerShell' },
+    platforms: { en: 'Windows', pt: 'Windows' },
     tagline: {
       en: 'A realism mod set for SpaceBourne 2, with one installer that keeps it switched on and up to date.',
       pt: 'Um conjunto de mods de realismo para SpaceBourne 2, com um instalador que os mantém ligados e atualizados.',
@@ -119,6 +123,8 @@ export const PROJECTS = [
       pt: 'PolyForm Noncommercial 1.0.0. Código disponível. Uso pessoal gratuito, uso comercial precisa de licença',
     },
     status: { en: 'In active use · self-hosted', pt: 'Em uso ativo · self-hosted' },
+    type: { en: 'Python server · JavaScript web interface', pt: 'Servidor Python · interface web em JavaScript' },
+    platforms: { en: 'Linux server · any browser, phone included', pt: 'Servidor Linux · qualquer navegador, telemóvel incluído' },
     tagline: {
       en: 'Routes each request to the right AI coding agent, within budget.',
       pt: 'Encaminha cada pedido para o agente de IA certo, dentro do orçamento.',
@@ -172,6 +178,8 @@ export const PROJECTS = [
     stack: ['C#', 'BepInEx 6', 'Player2'],
     licence: { en: 'MIT, open source', pt: 'MIT, código aberto' },
     status: { en: 'Early release · known bugs', pt: 'Versão inicial · com bugs conhecidos' },
+    type: { en: 'C# game mod · BepInEx plugin', pt: 'Mod de jogo em C# · plugin BepInEx' },
+    platforms: { en: 'PC game, Windows', pt: 'Jogo de PC, Windows' },
     tagline: {
       en: 'Talk to anyone in Shadows of Doubt in your own words.',
       pt: 'Fala com qualquer pessoa em Shadows of Doubt, por palavras tuas.',
@@ -216,6 +224,8 @@ export const PROJECTS = [
       pt: 'Licença Fatia 1.0: gratuita para uso pessoal, uso comercial precisa de licença',
     },
     status: { en: 'Live in the browser · installable', pt: 'Disponível no navegador · instalável' },
+    type: { en: 'Client-side web app · JavaScript', pt: 'App web no navegador · JavaScript' },
+    platforms: { en: 'Any modern browser · installable', pt: 'Qualquer navegador moderno · instalável' },
     tagline: {
       en: "A 3D printing price calculator built on your slicer's own estimate.",
       pt: 'Uma calculadora de preços de impressão 3D a partir da estimativa do teu slicer.',
@@ -263,6 +273,8 @@ export const PROJECTS = [
     stack: ['Python (standard library)', 'SQLite'],
     licence: { en: 'Bobina Licence 1.0, source available', pt: 'Licença Bobina 1.0, código disponível' },
     status: { en: 'Self-hosted web app', pt: 'App web self-hosted' },
+    type: { en: 'Python server · SQLite', pt: 'Servidor Python · SQLite' },
+    platforms: { en: 'Linux server · any browser', pt: 'Servidor Linux · qualquer navegador' },
     tagline: {
       en: 'Filament logistics: what you have, where it is, how much is left, what it costs.',
       pt: 'Logística de filamento: o que tens, onde está, quanto resta e quanto custa.',
@@ -310,6 +322,8 @@ export const PROJECTS = [
     stack: ['Python', 'Docker', 'PWA'],
     licence: { en: 'AGPL-3.0, open source', pt: 'AGPL-3.0, código aberto' },
     status: { en: 'Version 0.7 · self-hosted', pt: 'Versão 0.7 · self-hosted' },
+    type: { en: 'Python server · Docker', pt: 'Servidor Python · Docker' },
+    platforms: { en: 'Linux with Docker · any browser, phone included', pt: 'Linux com Docker · qualquer navegador, telemóvel incluído' },
     tagline: {
       en: 'Shopping lists with prices in view and a plan for where to buy, in Portugal and Spain.',
       pt: 'Listas de compras com os preços à vista e um plano de onde comprar, em Portugal e Espanha.',
@@ -361,6 +375,8 @@ export const PROJECTS = [
     stack: ['Node.js', 'Python', 'Kokoro & Piper voices', 'Kavita'],
     licence: { en: 'Private project, no public repository', pt: 'Projeto privado, sem repositório público' },
     status: { en: 'Private · self-hosted', pt: 'Privado · self-hosted' },
+    type: { en: 'Node.js and Python · neural voices', pt: 'Node.js e Python · vozes neurais' },
+    platforms: { en: 'Linux server · any browser', pt: 'Servidor Linux · qualquer navegador' },
     tagline: {
       en: 'A reading space where books and documents get a voice.',
       pt: 'Um espaço de leitura onde livros e documentos ganham voz.',
@@ -409,6 +425,8 @@ export const PROJECTS = [
     stack: ['React', 'JavaScript', 'Node.js', 'CKEditor'],
     licence: { en: 'Project licence in the repository (LICENSE.md)', pt: 'Licença própria no repositório (LICENSE.md)' },
     status: { en: 'Portable beta · release 2.1.2', pt: 'Beta portátil · release 2.1.2' },
+    type: { en: 'React web editor · Node.js', pt: 'Editor web em React · Node.js' },
+    platforms: { en: 'Windows portable · browser', pt: 'Portátil para Windows · navegador' },
     tagline: {
       en: 'From a document to a published Blogger post, with the layout intact.',
       pt: 'De um documento a um artigo publicado no Blogger, com o layout intacto.',
@@ -457,6 +475,8 @@ export const PROJECTS = [
     stack: ['C++', 'MinHook', 'PowerShell', 'Windows'],
     licence: { en: 'MIT, open source', pt: 'MIT, código aberto' },
     status: { en: 'Released tools · X4 in beta', pt: 'Ferramentas publicadas · X4 em beta' },
+    type: { en: 'Native C++ hooks · PowerShell', pt: 'Hooks nativos em C++ · PowerShell' },
+    platforms: { en: 'Windows only', pt: 'Só Windows' },
     tagline: {
       en: 'One game window across three independent monitors, without NVIDIA Surround.',
       pt: 'Uma janela de jogo em três monitores independentes, sem NVIDIA Surround.',
@@ -505,6 +525,8 @@ export const PROJECTS = [
     stack: ['Stellaris mod', 'Python'],
     licence: { en: 'FlexScript: MIT. The mod builds on MPP by Athinks', pt: 'FlexScript: MIT. O mod parte do MPP de Athinks' },
     status: { en: 'Steam Workshop mod · released tool', pt: 'Mod na Steam Workshop · ferramenta publicada' },
+    type: { en: 'Paradox script mod · Python tool', pt: 'Mod em script Paradox · ferramenta em Python' },
+    platforms: { en: 'PC · Steam Workshop', pt: 'PC · Steam Workshop' },
     tagline: {
       en: 'A Stellaris mod and a companion tool that make empire creation configurable.',
       pt: 'Um mod de Stellaris e uma ferramenta que tornam a criação de impérios configurável.',
@@ -549,6 +571,8 @@ export const PROJECTS = [
     stack: ['Unity'],
     licence: { en: 'Private project', pt: 'Projeto privado' },
     status: { en: 'In development · no release date', pt: 'Em desenvolvimento · sem data de lançamento' },
+    type: { en: 'Unity game', pt: 'Jogo em Unity' },
+    platforms: { en: 'Platforms to be announced', pt: 'Plataformas por anunciar' },
     tagline: {
       en: 'A political strategy game, being built in Unity.',
       pt: 'Um jogo de estratégia política, em construção no Unity.',
