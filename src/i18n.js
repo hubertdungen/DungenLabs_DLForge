@@ -53,6 +53,8 @@ export const UI = {
     ecoLinks: { dl: 'DungenLabs', dlx: 'DL X · hardware & shop', hd: 'Hubert Dungen · portfolio' },
     code: 'Code',
     rights: 'DungenLabs. Licences vary per project.',
+    legal: 'Legal notice',
+    privacy: 'Privacy policy',
     top: 'Back to top',
     modal: {
       close: 'Close',
@@ -131,6 +133,8 @@ export const UI = {
     ecoLinks: { dl: 'DungenLabs', dlx: 'DL X · hardware e loja', hd: 'Hubert Dungen · portefólio' },
     code: 'Código',
     rights: 'DungenLabs. As licenças variam por projeto.',
+    legal: 'Informação legal',
+    privacy: 'Política de privacidade',
     top: 'Voltar ao topo',
     modal: {
       close: 'Fechar',
