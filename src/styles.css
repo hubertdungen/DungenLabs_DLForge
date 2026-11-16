@@ -383,6 +383,7 @@ a.div-card:hover { border-color: var(--line-2); background: var(--panel-2); }
 .card:has(.card-hit:focus-visible) { outline: 2px solid var(--coral); outline-offset: -2px; }
 .card-tag { color: #c3d3d3; font-size: 0.95rem; }
 .card-meta { font-size: 0.78rem; color: var(--muted); }
+.card-plat { margin-top: 4px; color: var(--coral); }
 .card-open {
   margin-top: 4px; font: 700 0.66rem/1 var(--f-disp); letter-spacing: 0.16em; text-transform: uppercase; color: var(--coral);
   transition: letter-spacing 0.25s var(--ease);
@@ -512,7 +513,10 @@ a.div-card:hover { border-color: var(--line-2); background: var(--panel-2); }
 .method-list p { color: #c3d3d3; }
 @media (min-width: 900px) {
   .method { padding: 112px 0; }
-  .method-list { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .method-list { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+@media (min-width: 1200px) {
+  .method-list { grid-template-columns: repeat(4, 1fr); }
 }
 
 /* ---------- partners ---------- */

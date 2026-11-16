@@ -321,6 +321,7 @@ function Work({ t, lang, openProject }) {
                     <span className="sr-only">{t.kinds[p.kinds[0]]}. </span>
                     {p.status[lang]}
                   </p>
+                  <p className="card-meta card-plat">{p.type[lang]} <span aria-hidden="true">/</span> {p.platforms[lang]}</p>
                   <span className="card-open" aria-hidden="true">{t.open} →</span>
                 </div>
               </li>
@@ -594,6 +595,8 @@ function CaseModal({ id, onClose, t, lang }) {
           <aside className="case-side">
             <dl>
               <div><dt>{m.status}</dt><dd>{p.status[lang]}</dd></div>
+              <div><dt>{m.type}</dt><dd>{p.type[lang]}</dd></div>
+              <div><dt>{m.platforms}</dt><dd>{p.platforms[lang]}</dd></div>
               <div><dt>{m.licence}</dt><dd>{p.licence[lang]}</dd></div>
               <div><dt>{m.stack}</dt><dd className="stack">{p.stack.map((x) => <span key={x}>{x}</span>)}</dd></div>
             </dl>
