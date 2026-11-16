@@ -2,6 +2,9 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { PROJECTS, FILTERS, SB2_MODS, FEATURED } from './data.js';
 import { UI } from './i18n.js';
 
+const BASE = import.meta.env.BASE_URL;
+const asset = (path) => BASE + path.replace(/^\/+/, '');
+
 const GITHUB = 'https://github.com/hubertdungen';
 const byId = Object.fromEntries(PROJECTS.map((p) => [p.id, p]));
 const nameOf = (p, lang) => (typeof p.name === 'string' ? p.name : p.name[lang]);
@@ -100,8 +103,8 @@ function Visual({ p, t, lang, large }) {
     const s = p.shots[0];
     return (
       <img
-        src={`/shots/${s.file}-720.webp`}
-        srcSet={s.large ? `/shots/${s.file}-720.webp 720w, /shots/${s.file}-1440.webp 1440w` : undefined}
+        src={`${BASE}shots/${s.file}-720.webp`}
+        srcSet={s.large ? `${BASE}shots/${s.file}-720.webp 720w, ${BASE}shots/${s.file}-1440.webp 1440w` : undefined}
         sizes={large ? '(min-width: 1080px) 640px, 100vw' : '(min-width: 1080px) 400px, (min-width: 720px) 50vw, 100vw'}
         alt={s.alt[lang]}
         loading="lazy"
@@ -121,7 +124,7 @@ const visualTag = (p, t) =>
 /* ---------- logo ---------- */
 
 function Mark({ className }) {
-  return <img className={className} src="/brand/dlforge-mark.svg" alt="DL Forge" width="891" height="423" />;
+  return <img className={className} src={asset('/brand/dlforge-mark.svg')} alt="DL Forge" width="891" height="423" />;
 }
 
 /* ---------- header ---------- */
@@ -254,7 +257,7 @@ function Split({ t }) {
         <p className="section-lede" data-reveal>{t.splitLede}</p>
         <div className="split-grid">
           <a className="div-card" href="https://dlx.dungenlabs.com" {...ext} data-reveal>
-            <img src="/brand/dlx-mark.svg" alt="DL X" width="745" height="513" className="div-mark dlx" />
+            <img src={asset('/brand/dlx-mark.svg')} alt="DL X" width="745" height="513" className="div-mark dlx" />
             <p>{t.dlxText}</p>
             <span className="div-go">{t.visit} dlx.dungenlabs.com ↗</span>
           </a>
@@ -306,7 +309,7 @@ function Work({ t, lang, openProject }) {
                 </div>
                 <div className="card-body">
                   <div className="card-title">
-                    {p.icon ? <img src={p.icon} alt="" width="36" height="36" className="card-icon" loading="lazy" /> : <span className="card-icon mono" aria-hidden="true">{nameOf(p, lang).slice(0, 2)}</span>}
+                    {p.icon ? <img src={asset(p.icon)} alt="" width="36" height="36" className="card-icon" loading="lazy" /> : <span className="card-icon mono" aria-hidden="true">{nameOf(p, lang).slice(0, 2)}</span>}
                     <h3>
                       <button type="button" className="card-hit" onClick={() => openProject(p.id)} aria-haspopup="dialog">
                         {nameOf(p, lang)}
@@ -394,13 +397,13 @@ function Partners({ t }) {
         <ul className="partner-cards">
           <li>
             <a href="https://z89develop.pt" {...ext} aria-label="Z89 Develop">
-              <img src="/partners/z89.png" alt="" width="72" height="72" loading="lazy" />
+              <img src={asset('/partners/z89.png')} alt="" width="72" height="72" loading="lazy" />
               <span className="partner-word">Z89 <b>Develop</b></span>
             </a>
           </li>
           <li>
             <a href="https://hexrig.com" {...ext} aria-label="Hexrig">
-              <span className="hexrig-word">Hexrig</span>
+              <img className="hexrig-wordmark" src={asset('/partners/hexrig-wordmark.png')} alt="Hexrig" width="436" height="100" loading="lazy" />
             </a>
             <p className="partner-line">{t.hexrigLine}</p>
           </li>
@@ -493,7 +496,7 @@ function CaseModal({ id, onClose, t, lang }) {
       <div className="case-inner">
         <header className="case-head">
           <div className="case-id">
-            {p.icon && <img src={p.icon} alt="" width="44" height="44" />}
+            {p.icon && <img src={asset(p.icon)} alt="" width="44" height="44" />}
             <div>
               <p className="eyebrow">{p.kinds.map((k) => t.kinds[k]).join(' / ')}</p>
               <h2 id="case-title">{nameOf(p, lang)}</h2>
@@ -510,8 +513,8 @@ function CaseModal({ id, onClose, t, lang }) {
             {n ? (
               <img
                 key={s.file}
-                src={`/shots/${s.file}-720.webp`}
-                srcSet={s.large ? `/shots/${s.file}-720.webp 720w, /shots/${s.file}-1440.webp 1440w` : undefined}
+                src={`${BASE}shots/${s.file}-720.webp`}
+                srcSet={s.large ? `${BASE}shots/${s.file}-720.webp 720w, ${BASE}shots/${s.file}-1440.webp 1440w` : undefined}
                 sizes="(min-width: 1000px) 920px, 100vw"
                 alt={s.alt[lang]}
                 className={s.large ? '' : 'is-narrow'}
@@ -537,7 +540,7 @@ function CaseModal({ id, onClose, t, lang }) {
             <div className="thumbs">
               {shots.map((x, i) => (
                 <button key={x.file} type="button" aria-pressed={i === cur} onClick={() => setIdx(i)}>
-                  <img src={`/shots/${x.file}-720.webp`} alt="" loading="lazy" />
+                  <img src={`${BASE}shots/${x.file}-720.webp`} alt="" loading="lazy" />
                   <span className="sr-only">{x.alt[lang]}</span>
                 </button>
               ))}

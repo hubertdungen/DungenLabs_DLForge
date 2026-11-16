@@ -85,17 +85,17 @@ export const PROJECTS = [
     features: {
       en: [
         'Ticked means on: every ticked mod is installed and switched on',
-        'Shows the installed version next to the newest release; Update all',
+        'Shows the installed version next to the newest release, plus Update all',
         'Updates keep every setting you changed in config.lua',
-        'Never touches saves or the game executable; backups before replacing anything',
+        'Never touches saves or the game executable, and backs up before replacing anything',
         'Installs UE4SS 3.0.1 in one click when it is missing',
         'Plain PowerShell, so every line can be read before running',
       ],
       pt: [
         'Marcado quer dizer ligado: cada mod marcado fica instalado e ativo',
-        'Mostra a versão instalada ao lado da mais recente; Atualizar tudo',
+        'Mostra a versão instalada ao lado da mais recente, com Atualizar tudo',
         'As atualizações mantêm as definições que mudaste no config.lua',
-        'Nunca mexe nos saves nem no executável do jogo; faz cópia antes de substituir',
+        'Nunca mexe nos saves nem no executável do jogo, e faz cópia antes de substituir',
         'Instala o UE4SS 3.0.1 com um clique quando falta',
         'PowerShell simples: dá para ler cada linha antes de correr',
       ],
@@ -115,8 +115,8 @@ export const PROJECTS = [
     icon: '/icons/maestro.svg',
     stack: ['Python', 'JavaScript', 'PWA'],
     licence: {
-      en: 'PolyForm Noncommercial 1.0.0. Source available; personal use is free, commercial use needs a licence',
-      pt: 'PolyForm Noncommercial 1.0.0. Código disponível; uso pessoal gratuito, uso comercial precisa de licença',
+      en: 'PolyForm Noncommercial 1.0.0. Source available. Personal use is free, commercial use needs a licence',
+      pt: 'PolyForm Noncommercial 1.0.0. Código disponível. Uso pessoal gratuito, uso comercial precisa de licença',
     },
     status: { en: 'In active use · self-hosted', pt: 'Em uso ativo · self-hosted' },
     tagline: {
@@ -283,7 +283,7 @@ export const PROJECTS = [
         'Spools drawn from the colour name: "silk red", "Pastel Mint Green", "negro azabache"',
         'Weighted average cost per kilo across every purchase',
         'Storage as a tree (room › cabinet › shelf › box) with capacity and value',
-        'Tidy-up agent with Preview, Apply and Undo; Claude, GPT, Gemini or DeepSeek',
+        'Tidy-up agent with Preview, Apply and Undo, working with Claude, GPT, Gemini or DeepSeek',
       ],
       pt: [
         'Pesquisa instantânea com mais de 700 sinónimos em português e inglês',
@@ -292,7 +292,7 @@ export const PROJECTS = [
         'Bobines desenhadas a partir do nome da cor: "silk red", "Pastel Mint Green", "negro azabache"',
         'Custo médio por quilo, ponderado por todas as compras',
         'Arrumação em árvore (sala › armário › prateleira › caixa) com capacidade e valor',
-        'Agente de arrumação com Pré-visualizar, Aplicar e Anular; Claude, GPT, Gemini ou DeepSeek',
+        'Agente de arrumação com Pré-visualizar, Aplicar e Anular, com Claude, GPT, Gemini ou DeepSeek',
       ],
     },
     note: {
@@ -554,8 +554,8 @@ export const PROJECTS = [
       pt: 'Um jogo de estratégia política, em construção no Unity.',
     },
     summary: {
-      en: "Polistrat is DL Forge's own game, built in Unity and still in development. The project is private: there is no public build, store page or release date yet, and this page will not pretend otherwise.",
-      pt: 'O Polistrat é o jogo do próprio DL Forge, feito em Unity e ainda em desenvolvimento. O projeto é privado: ainda não há versão pública, página de loja nem data de lançamento, e esta página não vai fingir o contrário.',
+      en: "Polistrat is DL Forge's own game, built in Unity and still in development. The project is private: there is no public build, store page or release date yet, development updates will be shared here.",
+      pt: 'O Polistrat é o jogo do próprio DL Forge, feito em Unity e ainda em desenvolvimento. O projeto é privado: ainda não há versão pública, página de loja nem data de lançamento, as novidades do desenvolvimento serão partilhadas aqui.',
     },
     problem: {
       en: 'An earlier public prototype, PoliStrat Experience, explores a related idea: individuals forming groups, governments and ideologies, shown on a 2D political compass.',
