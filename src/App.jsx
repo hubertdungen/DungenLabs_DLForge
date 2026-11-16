@@ -448,8 +448,8 @@ function Footer({ t, lang, setLang }) {
             <li><a href="https://dungenlabs.com" {...ext}>{t.ecoLinks.dl} ↗</a></li>
             <li><a href="https://dlx.dungenlabs.com" {...ext}>{t.ecoLinks.dlx} ↗</a></li>
             <li><a href="https://www.hubertdungen.com" {...ext}>{t.ecoLinks.hd} ↗</a></li>
-            <li><a href="https://dungenlabs.com/legal" {...ext}>{t.legal} ↗</a></li>
-            <li><a href="https://dungenlabs.com/privacy" {...ext}>{t.privacy} ↗</a></li>
+            <li><a href={`https://dungenlabs.com/legal${lang === 'pt' ? '#pt' : ''}`} {...ext}>{t.legal} ↗</a></li>
+            <li><a href={`https://dungenlabs.com/privacy${lang === 'pt' ? '#pt' : ''}`} {...ext}>{t.privacy} ↗</a></li>
           </ul>
         </nav>
         <nav aria-label={t.code}>
