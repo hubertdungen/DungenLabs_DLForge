@@ -262,6 +262,11 @@ function Split({ t }) {
         <p className="eyebrow" data-reveal>{t.splitEyebrow}</p>
         <h2 id="split-title" className="section-title" data-reveal>{t.splitTitle}</h2>
         <p className="section-lede" data-reveal>{t.splitLede}</p>
+        <a className="div-card div-parent" href="https://dungenlabs.com" {...ext} data-reveal>
+          <img src={asset('/brand/dungenlabs.svg')} alt="DungenLabs" width="318" height="165" className="div-mark dl" />
+          <p>{t.dlText}</p>
+          <span className="div-go">{t.visit} dungenlabs.com ↗</span>
+        </a>
         <div className="split-grid">
           <a className="div-card" href="https://dlx.dungenlabs.com" {...ext} data-reveal>
             <img src={asset('/brand/dlx-mark.svg')} alt="DL X" width="745" height="513" className="div-mark dlx" />
