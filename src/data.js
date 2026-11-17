@@ -372,9 +372,9 @@ export const PROJECTS = [
     name: 'Lectoria',
     kinds: ['apps'],
     icon: '/icons/lectoria.svg',
-    stack: ['Node.js', 'Python', 'Kokoro & Piper voices', 'Kavita'],
-    licence: { en: 'Private project, no public repository', pt: 'Projeto privado, sem repositório público' },
-    status: { en: 'Private · self-hosted', pt: 'Privado · self-hosted' },
+    stack: ['Node.js', 'Python', 'Kokoro & Piper voices', 'Kavita (optional)'],
+    licence: { en: 'GPL-3.0, open source', pt: 'GPL-3.0, código aberto' },
+    status: { en: 'Open source · self-hosted', pt: 'Código aberto · self-hosted' },
     type: { en: 'Node.js and Python · neural voices', pt: 'Node.js e Python · vozes neurais' },
     platforms: { en: 'Linux server · any browser', pt: 'Servidor Linux · qualquer navegador' },
     tagline: {
@@ -382,8 +382,8 @@ export const PROJECTS = [
       pt: 'Um espaço de leitura onde livros e documentos ganham voz.',
     },
     summary: {
-      en: 'A reader for books and documents with local neural voices. It opens books from a Kavita library chapter by chapter, takes your own documents, and reads the articles published through BlogArtifex. Long readings are generated on the server as audio and keep their place across devices.',
-      pt: 'Um leitor de livros e documentos com vozes neurais locais. Abre livros de uma biblioteca Kavita capítulo a capítulo, aceita os teus documentos e lê os artigos publicados através do BlogArtifex. Leituras longas são geradas no servidor em áudio e guardam o ponto em todos os dispositivos.',
+      en: 'A reader for books and documents with local neural voices. It takes your own documents and reads blog articles, and can also open books from a Kavita library chapter by chapter. Kavita and the server voice engine (BlogArtifex) are both optional: a sensor detects what is installed and the app shows only what works. Long readings are generated on the server as audio and keep their place across devices.',
+      pt: 'Um leitor de livros e documentos com vozes neurais locais. Aceita os teus documentos, lê artigos de blogues e, se quiseres, abre livros de uma biblioteca Kavita capítulo a capítulo. O Kavita e o motor de voz do servidor (BlogArtifex) são ambos opcionais: um sensor deteta o que está instalado e a app mostra só o que funciona. Leituras longas são geradas no servidor em áudio e guardam o ponto em todos os dispositivos.',
     },
     problem: {
       en: 'Less noise, more stories: read quietly, or let the voice keep you company, on your own server.',
@@ -392,26 +392,26 @@ export const PROJECTS = [
     features: {
       en: [
         'Local neural voices in European Portuguese and US English',
-        'Kavita integration: books open on the same page you left them',
+        'Optional Kavita integration: books open on the same page you left them',
         'Drop in EPUB, PDF with text, DOCX, TXT or Markdown, up to 50 MB',
-        'Full readings generated on the server, with MP3 download',
+        'Full readings generated on the server (optional voice engine), with MP3 download; browser voices otherwise',
         'A queue and playlists shared across all your devices',
         'Book and Focus modes, light and dark themes',
       ],
       pt: [
         'Vozes neurais locais em português de Portugal e inglês dos EUA',
-        'Integração com o Kavita: os livros abrem na página onde ficaste',
+        'Integração opcional com o Kavita: os livros abrem na página onde ficaste',
         'EPUB, PDF com texto, DOCX, TXT ou Markdown, até 50 MB',
-        'Leituras completas geradas no servidor, com transferência em MP3',
+        'Leituras completas geradas no servidor (motor de voz opcional), com transferência em MP3; vozes no navegador sem ele',
         'Uma fila e playlists partilhadas por todos os dispositivos',
         'Modos Livro e Foco, temas claro e escuro',
       ],
     },
     note: {
-      en: 'Sample screens from the project. There is no public build to link to.',
-      pt: 'Ecrãs de exemplo do projeto. Não há versão pública para ligar.',
+      en: 'Sample screens from the project. Self-hosted: the repository has the install steps and the optional integrations.',
+      pt: 'Ecrãs de exemplo do projeto. Self-hosted: o repositório tem os passos de instalação e as integrações opcionais.',
     },
-    links: [],
+    links: [{ label: { en: 'Source & install', pt: 'Código e instalação' }, href: GH + 'Lectoria' }],
     shots: [
       shot('lectoria-home', 'Home: where the next reading comes from', 'Início: de onde vem a próxima leitura'),
       shot('lectoria-reading', 'Reading view, dark theme', 'Vista de leitura, tema escuro'),
