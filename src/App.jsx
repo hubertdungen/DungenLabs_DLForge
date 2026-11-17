@@ -679,11 +679,16 @@ export default function App() {
     document.documentElement.classList.add('reveal-ready');
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        if (e.isIntersecting || e.boundingClientRect.top < 0) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
     }, { rootMargin: '0px 0px -8% 0px' });
     els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    // Safety net: anchor jumps / fast flings can skip observer callbacks; never leave a section blank.
+    const sweep = () => els.forEach((el) => { if (el.getBoundingClientRect().top < innerHeight) el.classList.add('in'); });
+    addEventListener('scroll', sweep, { passive: true });
+    addEventListener('hashchange', sweep);
+    const tm = setInterval(sweep, 1000);
+    return () => { io.disconnect(); removeEventListener('scroll', sweep); removeEventListener('hashchange', sweep); clearInterval(tm); };
   }, []);
 
   return (
