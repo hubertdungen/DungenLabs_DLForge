@@ -388,7 +388,7 @@ function Method({ t }) {
         <h2 id="method-title" className="section-title" data-reveal>{t.methodTitle}</h2>
         <ol className="method-list">
           {t.method.map(([h, p], i) => (
-            <li key={h} data-reveal>
+            <li key={i} data-reveal>
               <span className="m-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
               <h3>{h}</h3>
               <p>{p}</p>
@@ -672,24 +672,18 @@ export default function App() {
     setOpenId(null);
   };
 
-  // Reveal-on-scroll; content stays visible if this never runs.
+  // Reveal-on-scroll; content stays visible if this never runs. Re-queries the DOM each time so
+  // elements re-created by a language switch (keyed lists) are never left hidden.
   useEffect(() => {
-    const els = document.querySelectorAll('[data-reveal]');
-    if (!('IntersectionObserver' in window)) return;
     document.documentElement.classList.add('reveal-ready');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting || e.boundingClientRect.top < 0) { e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, { rootMargin: '0px 0px -8% 0px' });
-    els.forEach((el) => io.observe(el));
-    // Safety net: anchor jumps / fast flings can skip observer callbacks; never leave a section blank.
-    const sweep = () => els.forEach((el) => { if (el.getBoundingClientRect().top < innerHeight) el.classList.add('in'); });
+    const sweep = () => document.querySelectorAll('[data-reveal]:not(.in)').forEach((el) => { if (el.getBoundingClientRect().top < innerHeight * 0.95) el.classList.add('in'); });
+    sweep();
     addEventListener('scroll', sweep, { passive: true });
     addEventListener('hashchange', sweep);
-    const tm = setInterval(sweep, 1000);
-    return () => { io.disconnect(); removeEventListener('scroll', sweep); removeEventListener('hashchange', sweep); clearInterval(tm); };
-  }, []);
+    addEventListener('resize', sweep);
+    const tm = setInterval(sweep, 500);
+    return () => { removeEventListener('scroll', sweep); removeEventListener('hashchange', sweep); removeEventListener('resize', sweep); clearInterval(tm); };
+  }, [lang]);
 
   return (
     <>
