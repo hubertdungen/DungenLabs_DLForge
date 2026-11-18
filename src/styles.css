@@ -328,7 +328,9 @@ p { margin: 0; }
 }
 a.div-card:hover { border-color: var(--line-2); background: var(--panel-2); }
 .div-card p { color: #c3d3d3; max-width: 44ch; }
-.div-mark { height: 64px; width: auto; }
+.div-mark { height: 64px; width: auto; filter: brightness(0) invert(1); transition: filter .3s; }
+.div-card:hover .div-mark { filter: none; }
+@media (prefers-reduced-motion: reduce) { .div-mark { transition: none; } }
 .div-mark.dlx { height: 60px; }
 .div-mark.dl { height: 56px; }
 .div-parent { margin-top: 36px; }
