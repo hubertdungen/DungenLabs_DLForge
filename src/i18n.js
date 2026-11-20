@@ -37,7 +37,7 @@ export const UI = {
     methodTitle: 'How a Forge project gets made.',
     method: [
       ['Start from a real problem', 'Bobina answers where a spool is, how much is left and what it cost. The triple-screen tools exist because X4 kept snapping its window back onto one monitor.'],
-      ['Run on your own machine', 'Grimório, Bobina, Despensa, Lectoria and Maestro AI are self-hosted. Decks, spools, lists and readings stay on your hardware.'],
+      ['Run on your own machine', 'Grimório, Bobina, Despensa, Lectoria, Rumo and Maestro AI are self-hosted. Decks, spools, lists, readings and budgets stay on your hardware.'],
       ['Build on real systems', 'Grimório plays decks through the Forge rules engine. Fatia turns slicer estimates into quotations. Loose Lips connects conversations to the state of the game.'],
       ['Linux-friendly by conviction', 'We believe in software freedom: your computer, your data, your choice of system. So most of our apps run on Linux or in any browser, and the Windows-only ones say so on their card.'],
     ],
@@ -118,7 +118,7 @@ export const UI = {
     methodTitle: 'Como nasce um projeto Forge.',
     method: [
       ['Partir de um problema real', 'O Bobina responde onde está cada bobine, quanto resta e quanto custou. As ferramentas de três ecrãs existem porque o X4 insistia em voltar a encolher a janela para um monitor.'],
-      ['Correr na tua máquina', 'Grimório, Bobina, Despensa, Lectoria e Maestro AI são self-hosted. Baralhos, bobines, listas e leituras ficam no teu hardware.'],
+      ['Correr na tua máquina', 'Grimório, Bobina, Despensa, Lectoria, Rumo e Maestro AI são self-hosted. Baralhos, bobines, listas, leituras e orçamentos ficam no teu hardware.'],
       ['Trabalhar com sistemas reais', 'O Grimório joga baralhos com o motor de regras Forge. O Fatia transforma estimativas do slicer em orçamentos. O Loose Lips liga as conversas ao estado do jogo.'],
       ['Linux-friendly por convicção', 'Acreditamos na liberdade informática: o computador, os dados e o sistema são teus. Por isso a maioria das apps corre em Linux ou em qualquer navegador, e as só para Windows dizem-no no cartão.'],
     ],
