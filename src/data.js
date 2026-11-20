@@ -373,7 +373,7 @@ export const PROJECTS = [
     kinds: ['apps'],
     icon: '/icons/rumo.svg',
     stack: ['Python', 'SQLite', 'JavaScript'],
-    licence: { en: 'GPL-3.0, open source', pt: 'GPL-3.0, código aberto' },
+    licence: { en: 'MIT, free for commercial use', pt: 'MIT, uso comercial livre' },
     status: { en: 'Open source · self-hosted', pt: 'Código aberto · self-hosted' },
     type: { en: 'Python server · SQLite · one-page web app', pt: 'Servidor Python · SQLite · app web de uma página' },
     platforms: { en: 'Windows, Linux or macOS with Python 3.10+ · any browser, phone included', pt: 'Windows, Linux ou macOS com Python 3.10+ · qualquer navegador, telemóvel incluído' },
