@@ -14,7 +14,7 @@ The previous address https://dungenlabs.com/forge/ redirects permanently to the 
 
 ## Content and validation
 
-The catalogue contains 12 project case files, English and Portuguese copy, screenshots, category filters and the SpaceBourne 2 mod roster. Source and download links identify each project's own licence. The partners are Z89 Develop and Hexrig; Hexrig's wordmark image is a capture of its storefront header.
+The catalogue contains 13 project case files, English and Portuguese copy, screenshots, category filters and the SpaceBourne 2 mod roster. Source and download links identify each project's own licence. The partners are Z89 Develop and Hexrig; Hexrig's wordmark image is a capture of its storefront header.
 
 The site maker was Claude Opus 5.5 at high effort. Codex handled integration, deployment and browser verification. Mobile and desktop checks cover the filters, galleries, keyboard close, language switching, menu, partner dimensions, loaded images, browser errors and horizontal overflow.
 
