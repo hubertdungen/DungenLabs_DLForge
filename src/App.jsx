@@ -7,6 +7,10 @@ const asset = (path) => BASE + path.replace(/^\/+/, '');
 
 const GITHUB = 'https://github.com/hubertdungen';
 const byId = Object.fromEntries(PROJECTS.map((p) => [p.id, p]));
+const fromUrl = () => {
+  const k = decodeURIComponent(location.pathname.replace(/\//g, '') || location.hash.slice(1));
+  return byId[k] ? k : null;
+};
 const nameOf = (p, lang) => (typeof p.name === 'string' ? p.name : p.name[lang]);
 const counts = Object.fromEntries(
   FILTERS.map((f) => [f, f === 'all' ? PROJECTS.length : PROJECTS.filter((p) => p.kinds.includes(f)).length]),
@@ -635,10 +639,7 @@ function CaseModal({ id, onClose, t, lang }) {
 
 export default function App() {
   const [lang, setLangState] = useState(initialLang);
-  const [openId, setOpenId] = useState(() => {
-    const h = decodeURIComponent(location.hash.slice(1));
-    return byId[h] ? h : null;
-  });
+  const [openId, setOpenId] = useState(fromUrl);
   const t = UI[lang];
 
   const setLang = (l) => {
@@ -648,27 +649,26 @@ export default function App() {
 
   useEffect(() => {
     document.documentElement.lang = lang === 'pt' ? 'pt-PT' : 'en';
-    document.title = lang === 'pt'
+    document.title = openId ? (lang === 'en' && byId[openId].seo?.title) || `${nameOf(byId[openId], lang)} · DL Forge` : lang === 'pt'
       ? 'DL Forge · Software, jogos e mods da DungenLabs'
       : 'DL Forge · Software, games and mods by DungenLabs';
-  }, [lang]);
+  }, [lang, openId]);
 
-  // Deep links: #grimorio opens that case file; back button closes it.
+  // Deep links: /grimorio/ (static page from scripts/prerender.mjs) or the old #grimorio open that case file;
+  // the back button closes it.
   useEffect(() => {
-    const on = () => {
-      const h = decodeURIComponent(location.hash.slice(1));
-      setOpenId(byId[h] ? h : null);
-    };
-    window.addEventListener('hashchange', on);
-    return () => window.removeEventListener('hashchange', on);
+    const on = () => setOpenId(fromUrl());
+    addEventListener('popstate', on);
+    addEventListener('hashchange', on);
+    return () => { removeEventListener('popstate', on); removeEventListener('hashchange', on); };
   }, []);
 
   const openProject = (id) => {
-    history.pushState(null, '', `#${id}`);
+    history.pushState(null, '', `/${id}/`);
     setOpenId(id);
   };
   const closeProject = () => {
-    if (byId[decodeURIComponent(location.hash.slice(1))]) history.replaceState(null, '', location.pathname + location.search);
+    if (fromUrl()) history.replaceState(null, '', '/' + location.search);
     setOpenId(null);
   };
 
