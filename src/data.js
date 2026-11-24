@@ -15,15 +15,18 @@ export const PROJECTS = [
     kinds: ['apps', 'games'],
     icon: '/icons/grimorio.svg',
     stack: ['React', 'Python', 'SQLite', 'Three.js', 'Forge'],
-    licence: { en: 'GPL-3.0, open source', pt: 'GPL-3.0, código aberto' },
+    licence: {
+      en: 'PolyForm Noncommercial 1.0.0 (Forge parts GPL-3.0). Source available. Free for noncommercial use, commercial use needs a licence',
+      pt: 'PolyForm Noncommercial 1.0.0 (partes do Forge em GPL-3.0). Código disponível. Gratuito para uso não comercial, uso comercial precisa de licença',
+    },
     status: { en: 'Released · Windows, Linux & Android · self-hosted', pt: 'Publicado · Windows, Linux e Android · self-hosted' },
     type: { en: 'Web app · React front end, Python back end', pt: 'App web · React no ecrã, Python por trás' },
     platforms: { en: 'Windows · Linux · Android', pt: 'Windows · Linux · Android' },
     seo: {
-      title: 'Grimório · Free open-source MTG deck builder: play vs bots or friends · DL Forge',
-      description: 'Grimório is a free, open-source Magic: The Gathering deck builder for Commander/EDH, Modern and every format. Explained card suggestions from EDHREC, real decks and Commander Spellbook combos, then play your deck against Forge bots or your friends online, or let the bots run quick test games. Windows, Linux and Android.',
+      title: 'Grimório · Free MTG deck builder: play vs bots or friends · DL Forge',
+      description: 'Grimório is a free, source-available Magic: The Gathering deck builder for Commander/EDH, Modern and every format. Explained card suggestions from EDHREC, real decks and Commander Spellbook combos, then play your deck against Forge bots or your friends online, or let the bots run quick test games. Windows, Linux and Android.',
       image: '/shots/grimorio-og.png',
-      keywords: 'MTG deck builder, Magic: The Gathering, Commander, EDH, deck tester, Forge, goldfish, draft simulator, open source',
+      keywords: 'MTG deck builder, Magic: The Gathering, Commander, EDH, deck tester, Forge, goldfish, draft simulator, free, source available',
     },
     tagline: {
       en: 'Build, test and battle Magic: The Gathering decks.',
